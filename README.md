@@ -1,6 +1,6 @@
 # SingleChainModels
 **Official implementation of the paper:**
-**"Stretching Response of a Polymer Chain with Deformable Bonds"** ([arXiv](https://arxiv.org/abs/2502.08602))
+**"Stretching Response of a Polymer Chain with Deformable Bonds"** ([Paper Link](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.218101))
 
 ## Description
 
@@ -21,8 +21,12 @@ If you find this work useful in your research, please cite:
 @article{zhu2025stretching,
   title={Stretching Response of a Polymer Chain with Deformable Bonds},
   author={Zhu, Jie and Brassart, Laurence},
-  journal={arXiv preprint arXiv:2502.08602},
-  year={2025}
+  journal={Physical Review Letters},
+  volume={134},
+  number={21},
+  pages={218101},
+  year={2025},
+  publisher={APS}
 }
 ```
 
