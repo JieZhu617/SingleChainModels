@@ -1,17 +1,27 @@
 # SingleChainModels
-**Official implementation of the paper:**
-**"Stretching Response of a Polymer Chain with Deformable Bonds"** ([Paper Link](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.218101))
+Python implementations of statistical-mechanics and semi-analytical models for the stretching response of single polymer chains with deformable bonds.
+
+This repository contains code associated with the following works:
+1. **"Stretching Response of a Polymer Chain with Deformable Bonds"** ([Paper Link](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.218101))
+2. **"Elasticity of a Polymer Chain with Deformable Bonds under Fixed Extension and Constant Force"**
 
 ## Description
 
-This repository contains Python implementations of statistical mechanics and semi-analytical models to study the stretching behavior of polymer chains. Specifically, it includes models accounting for both bond stretching and bond angle deformation, providing accurate predictions of polymer chain responses across the entire force ranges.
+This repository provides numerical implementations for polymer-chain elasticity models with bond stretching and bond-angle deformation. The codes cover both semi-analytical chain models and transfer-matrix calculations in different statistical ensembles. 
 
-The main features include:
+The transfer-matrix calculations are organized into two ensemble settings:
 
-- **Statistical Mechanics Models**: Implementation of transfer matrix methods to calculate bond orientation probabilities and force-extension relationships.
-- **Semi-Analytical Models**: Efficient computation using deformable Freely Rotating Chain (dFRC) and extensible Freely Jointed Chain (eFJC) models, ideal for rapid evaluation and analysis.
+- **Gibbs ensemble / constant-force ensemble**: the applied force is prescribed. In the isotropic formulation used in the PRL paper, the response depends only on the force magnitude. In the fixed-extension/constant-force comparison, this ensemble is expressed equivalently as a prescribed force along the pulling direction. The main output is the average extension as a function of force.
 
-These tools enable researchers to explore polymer chain mechanics comprehensively, offering predictions validated by experimental data without the necessity of parameter fitting.
+- **Fixed-extension ensemble**: the chain end-to-end extension along the pulling direction is prescribed. The main output is the average force as a function of extension.
+
+The repository also includes semi-analytical models for efficient evaluation of force-extension behavior:
+
+- **deformable freely rotating chain (dFRC) model**: a reduced model that incorporates both bond stretching and bond-angle deformation. It provides an efficient approximation to the full transfer-matrix calculations.
+
+- **extensible freely jointed chain (eFJC) model**: a simpler semi-analytical model with freely jointed orientations and extensible bonds, used as a reference model for comparison.
+
+Together, these tools provide a unified framework for studying single-chain elasticity with deformable bonds, combining full transfer-matrix calculations, fixed-extension and constant-force descriptions, and semi-analytical approximations. They can be used to examine how bond stretching and bond-angle deformation affect polymer-chain mechanics, to analyze finite-chain and ensemble effects, and to make parameter-free predictions that can be compared with experimental data.
 
 ## Citation
 
@@ -37,6 +47,7 @@ For detailed derivations and formulas, please refer to the full text of the pape
 To run the codes provided in this repository, please ensure you have the following Python libraries installed:
 
 - `numpy`
+- `mpmath`
 - `scipy`
 - `matplotlib`
 
