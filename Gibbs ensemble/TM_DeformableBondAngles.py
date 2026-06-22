@@ -1,5 +1,5 @@
 # Description: Calculate the bond orientation probabilities and force-extension curve in a chain with deformable bond angles
-#              with harmonic bending energy: v_{ben}(l) = 1/2*k_phi*(phi-phi_e)^2
+#              with harmonic bending energy: v_{ben}(phi) = 1/2*k_phi*(phi-phi_e)^2
 # Authors: Jie Zhu, Laurence Brassart
 # Date: May 02, 2025
 
