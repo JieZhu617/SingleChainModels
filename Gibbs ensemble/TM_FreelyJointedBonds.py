@@ -132,5 +132,5 @@ if __name__ == '__main__':
     plt.xlabel(r'$fl_e/k_BT$')
     plt.ylabel(r'$r/Nl$')
     plt.legend(loc='lower right')
-    plt.grid('false')
+    plt.grid(False)
     plt.show()
