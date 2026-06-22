@@ -1,5 +1,8 @@
-# Description: Calculate the fixed-extension partition function and force-extension curve in a chain with freely jointed bonds
-#              including rigid bonds and extensible bonds (v_{str}(l) = 1/2*k_l*(l-l_e)^2)
+# Description: Calculate the fixed-extension partition function and force-extension curve 
+#              for a chain with freely jointed bonds, including rigid bonds and
+#              extensible bonds with v_{str}(l) = 1/2*k_l*(l-l_e)^2.
+#              High-precision arithmetic from mpmath is used to reduce round-off and 
+#              cancellation errors in the inverse Fourier transform.              
 # Authors: Jie Zhu, Laurence Brassart
 # Date: June 22, 2026
 
