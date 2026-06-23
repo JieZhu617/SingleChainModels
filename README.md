@@ -44,32 +44,33 @@ For detailed derivations and formulas, please refer to the corresponding papers.
 
 ## Required Python Libraries
 
-To run the codes provided in this repository, please ensure you have the following Python libraries installed:
+To run the codes provided in this repository, please ensure that the following Python libraries are installed:
 
-- `numpy`
-- `mpmath`
-- `scipy`
-- `matplotlib`
-
-For improved computational efficiency, you can utilize parallel computation through:
-
-- `multiprocessing`
+- `numpy`: array operations, numerical grids, and standard numerical calculations
+- `scipy`: numerical integration, interpolation, and scientific computing utilities
+- `matplotlib`: plotting force-extension curves and other numerical results
+- `mpmath`: high-precision arithmetic, used especially for inverse Fourier transforms in the fixed-extension calculations
 
 These libraries can be installed using `pip`:
 
 ```
-pip install numpy scipy matplotlib
+pip install numpy scipy matplotlib mpmath
 ```
 
-The `multiprocessing` module is typically included in the standard Python library.
+For improved computational efficiency in large calculations, parallel computation can be implemented using `multiprocessing`. This module is typically included in the standard Python library and does not need to be installed separately.
 
-## Documents
+## Repository Structure
 
-### Transfer Matrix Calculations
+### Gibbs ensemble
 
-- **TM_DeformableBondAngles.py**: Calculate the bond orientation probabilities and force-extension curve in a chain with deformable bond angles.
-- **TM_FixedBondAngles.py**: Calculate the bond orientation probabilities and force-extension curve in a chain with fixed bond angles.
-- **TM_FreelyJointedBonds.py**: Calculate the bond orientation probabilities and force-extension curve in a chain with freely jointed bonds.
+- **TM_DeformableBondAngles.py**: Transfer-matrix calculation for chains with deformable bond angles. Computes the partition function and the average extension as a function of prescribed force.
+- **TM_FixedBondAngles.py**: Transfer-matrix calculation for chains with fixed bond angles. Computes the partition function and the average extension as a function of prescribed force.
+- **TM_FreelyJointedBonds.py**: Transfer-matrix calculation for chains with freely jointed bonds. Computes the partition function and the average extension as a function of prescribed force.
+
+### Fixed-extension ensemble
+
+- **FE_TM_DeformableBondAngles.py**: Transfer-matrix calculation for chains with deformable bond angles. Computes the partition function and the average force as a function of prescribed extension.
+- **FE_TM_FreelyJointedBonds.py**: Transfer-matrix calculation for chains with freely jointed bonds. Computes the partition function and the average force as a function of prescribed extension.
 
 ### Semi-analytical Models
 
